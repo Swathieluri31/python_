@@ -37,4 +37,14 @@ for i in list:
     if i%2 == 0:
         print(i)
 
+#table 
+for i in range(1,11):
+    for j in range(1,11):
+        print(i * j, end ="\t")
+    print()
 
+#while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
