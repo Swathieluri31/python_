@@ -85,3 +85,48 @@ while i < 10:
     if i == 3 or i == 6:
         continue
     print(i)
+
+#break if total sum > 100
+n = [10, 20, 30, 40, 15, 5, 7]
+total = 0
+for num in n:
+    total += num
+    if total > 100:
+        break
+    print("sum:",total)
+
+#skip words starting with b
+String = ["bat","apple","banana","cat","dog"]
+for word in String:
+    if word.startswith('b'):
+        continue
+    print(word)
+
+#nested loop with break
+for i in range(1,4): 
+     for j in range(1,10):
+         if i*j > 20:
+             break
+         print(f"{i}x{j}= {i*j}")
+
+#find first even and break
+nums = [1, 3, 5, 8, 9]
+for num in  nums:
+    if num % 2 == 0:
+        print("First even:",num)
+        break
+
+#continue on divisible by 4 or 6
+for i in range(1, 31):
+    if i%4 == 0 or i%6 == 0:
+        continue
+    print(i)
+
+#skip every third caharacter
+text = "abcdefghij"
+for index, char in enumerate(text, 1):
+if index %3 == 0:
+    continue
+print(char)
+
+
