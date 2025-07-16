@@ -125,7 +125,7 @@ for i in range(1, 31):
 #skip every third caharacter
 text = "abcdefghij"
 for index, char in enumerate(text, 1):
-if index %3 == 0:
+   if index %3 == 0:
     continue
 print(char)
 
