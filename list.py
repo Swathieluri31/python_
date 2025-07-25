@@ -48,12 +48,33 @@ list = [i for i in range(5)]
 list[2:4] = [10,11,12]
 print(list) # [0, 1, 10, 11, 12, 4]
 
-# list ->> tuple
-fruits = ['apple','banana','cherry']
-
-print(fruit_tuple)
- 
 #append
 numbers = [1,2,3]
 numbers.append(4)
 print(numbers)
+
+#list comprehension
+#list comprehension is a concise way to create lists using a single line of code.It replaces traditional loops and append() methods.
+#syntax: [expression for item in iterable if condition]
+
+#Squares
+n=map(int,input("Enter a value:").split())
+square = [x**2 for x in n]
+print(square)
+
+#Input taken by user
+
+#Print Even Numbers only
+even = [x for x in range (10)if x%2==0]
+print(even)
+
+#Input taken by user print Even numbers only
+n=map(int,input("Enter a value:").split())
+even = [x for x in n if x%2==0]
+print(even)
+
+#Print Even and Odd
+   
+
+#Input taken by user print Even & Odd numbers
+ 
