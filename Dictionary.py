@@ -40,3 +40,4 @@ print(d)
 n = map(int, input("Enter a value: ").split())
 square_dict = {x: x**2 for x in n}
 print(square_dict)
+
