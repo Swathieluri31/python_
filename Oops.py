@@ -43,3 +43,83 @@ class Car:
 
 Car.update_wheels(6)
 print(Car.wheels)
+
+#static method
+class Car:
+    @staticmethod
+    def greet():
+        print("Hello,Swathi")
+Car.greet()
+
+# write a python program to print only characters and numbers in a password without any special characters
+def clean_password(password):
+    cleaned = ''.join(char for char in password if char.isalnum())
+    print("cleaned password:",cleaned)
+clean_password("Swathi@031")
+
+# Single Inheritance 
+class Parent:
+    def greet(self):
+        print("Hello from Parent")
+
+class Child(Parent):
+    def greets(self):
+        print("Hello from Child")
+        
+obj=Child()
+obj.greet()
+obj.greets()
+
+# Multilevel Inheritance
+class Grandparent:
+    def greets(self):
+        print("Hello from Grandparent")
+
+class Parent(Grandparent):
+    def greets(self):
+        print("Hello from Parent")
+
+class Child(Parent):
+    def greet(self):
+        print("Hello from Child")
+
+obj = Child()
+obj.greets()
+
+
+# Multiple Inheritance
+class Father:
+    def greet(self):
+        print("Hello from Father")
+
+class Mother:
+    def greet(self):
+        print("Hello from Mother")
+
+class  Child(Father,Mother):
+   pass
+
+obj = Child()
+obj.greet()
+
+# Hierarchical Inheritance
+class Parent:
+    def greet(self):
+         print("Hello from Parent")
+
+class Child1(Parent):
+    def c1(self):
+         print("Hello from Child1")
+
+class Child2(Parent):
+    def c2(self):
+         print("Hello from Child2")
+
+obj1 = Child1()
+obj2 = Child2()
+obj1.greet()
+obj1.c1()
+obj2.greet()
+obj2.c2()
+
+# Polymorphism  it means many ways these are 4 types 1.compile time polymorphism 2.
