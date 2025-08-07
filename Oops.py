@@ -124,3 +124,27 @@ obj2.c2()
 
 # Polymorphism  it means many ways these are of 4 types 1.compile time polymorphism(Method Overloading) 2.Runtime polymorphism(Method Overriding) 3.Operator Overloading 4.Duck Typing
 
+# Duck Typing
+class Animal:
+    def Sound(self):
+       print("Animal Makes Sound")
+class Dog:
+    def Sound(self):
+       print("Bark")
+class Cat:
+     def Sound(self):
+        print("Meow")
+def get_Sound(animal):
+    animal.Sound()
+get_Sound(Dog())
+get_Sound(Cat())
+
+# Overloading Method
+class Science: 
+    def add(self,a,b=0,c=0,d=0):
+        return a+b+c
+m=Science()
+print(m.add(5,7,9))
+
+
+   
