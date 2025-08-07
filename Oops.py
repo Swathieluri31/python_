@@ -122,4 +122,5 @@ obj1.c1()
 obj2.greet()
 obj2.c2()
 
-# Polymorphism  it means many ways these are 4 types 1.compile time polymorphism 2.
+# Polymorphism  it means many ways these are of 4 types 1.compile time polymorphism(Method Overloading) 2.Runtime polymorphism(Method Overriding) 3.Operator Overloading 4.Duck Typing
+
