@@ -34,4 +34,66 @@ s=students()
 s.set_name("swathi")
 print(s.get_name())
 
+# Data abstraction
+# its know as pillar of Oops it displays only main data and hides the implementation code
+from abc import ABC, abstractmethod
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+    @abstractmethod
+    def stop(self):
+        pass
+class Car(Vehicle):
+    def start(self):
+        print("Car is started")
+
+    def stop(self):
+        print("Car is stopped")
+    def speed(self):
+        print("Car speed")
+    
+    def cost(self):
+        print("Car Cost")
+ 
+class Bike(Vehicle):
+    def start(self):
+        print("Bike is started")
+
+    def stop(self):
+        print("Bike is stopped")
+
+    def speed(self):
+        print("Bike speed")
+    
+    def cost(self):
+        print("Bike Cost")
+ 
+
+#Creating object
+c=Car()
+c.start()
+c.stop()
+b=Bike()
+b.speed()
+b.cost()
+
+# Animal abstraction
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass
+# subclass 1
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
+# subclass 2
+class Cat(Animal):
+    def sound(self):
+        return "Meows"
+
+Animals=[Dog(), Cat()]
+for a in Animals:
+   print(a.sound())
 
