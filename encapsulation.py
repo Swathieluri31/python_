@@ -97,3 +97,29 @@ Animals=[Dog(), Cat()]
 for a in Animals:
    print(a.sound())
 
+# Payment gateway abstraction
+from abc import ABC, abstractmethod
+class Paymentgateway(ABC):
+    @abstractmethod
+    def pay(self, amount):
+        pass
+    @abstractmethod
+    def refund(self, amount):
+        pass
+class CreditCardPayment(Paymentgateway):
+    def pay(self, amount):
+        print("Credited via Creditcard:")
+    def refund(self, amount):
+        print("Refunded via Creditcard:")
+class UPI(Paymentgateway):
+    def pay(self, amount):
+        print("Credited via UPI:")
+    def refund(self, amount):
+        print("Refunded via UPI:")
+# Creating objects
+credit_card = CreditCardPayment()
+credit_card.pay(1000)
+credit_card.refund(500)
+upi = UPI()
+upi.pay(2000)
+upi.refund(1000)
