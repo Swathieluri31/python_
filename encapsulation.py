@@ -116,7 +116,7 @@ class CreditCardPayment(Paymentgateway):
 class UPI(Paymentgateway):
     def pay(self, amount):
         print("Credited via UPI:")
-        
+
     def refund(self, amount):
         print("Refunded via UPI:")
 # Creating objects
@@ -126,3 +126,29 @@ credit_card.refund(500)
 upi = UPI()
 upi.pay(2000)
 upi.refund(1000)
+
+# Online Shopping abstraction
+from abc import ABC, abstractmethod
+class Product(ABC):
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
+    @abstractmethod
+    def calculate_discounted_price(self):
+       pass
+    
+class Electronics(Product):
+    def calculate_discounted_price(self):
+        return self.price * 0.90
+    
+class Clothing(Product):
+    def calculate_discounted_price(self):
+        return self.price * 0.80
+    
+class Groceries(Product):
+    def calculate_discounted_price(self):
+        return self.price * 0.85
+products = [ Electronics("Laptop", 50000),Clothing("T-shirt", 4000),Groceries("Apple", 100)]
+for p in products:
+    print(f"{p.name}: Original Price: {p.price}, Discounted Price: {p.calculate_discounted_price()}")
+
