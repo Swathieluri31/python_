@@ -109,11 +109,14 @@ class Paymentgateway(ABC):
 class CreditCardPayment(Paymentgateway):
     def pay(self, amount):
         print("Credited via Creditcard:")
+
     def refund(self, amount):
         print("Refunded via Creditcard:")
+
 class UPI(Paymentgateway):
     def pay(self, amount):
         print("Credited via UPI:")
+        
     def refund(self, amount):
         print("Refunded via UPI:")
 # Creating objects
